@@ -29,6 +29,10 @@ Tells git to set current repository as the latest version. When pushed, will rep
 
 Replaces the **remote** repository with the commit version on your local machine.
 
+#### git pull
+
+Pulls the remote repository and its latest version changes to the local directory.
+
 #### git push -u origin *directory*
 
 In addition to working the same way as `git push origin directory`, sets an upstream link to your git remote repository. This allows the user to omit `origin directory` in their next `git push`.
@@ -57,10 +61,14 @@ Switches current branch to `branch-name`.
 
 Creates a new branch called `branch-name` and switches your current branch to it.
 
+#### git branch -d branch-name
+
+Delete `branch-name`
+
 #### git diff branch-name
 
 Compares code between `branch-name` and `master`. Displays output to the command line.
 
 #### git merge branch-name
 
-Merge changes between `branch-name` and `master`
+Merge changes between `branch-name` to `master`
