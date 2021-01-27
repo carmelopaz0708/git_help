@@ -8,7 +8,8 @@ Commands for getting started with Git.
 
 **git init**
 
-Initializes current path as a git repository.<br>
+Initializes current path as a git repository.
+
     $ git init
     Initialized empty Git repository in C:/Users/siege/Developer/git/demo/.git/
 
