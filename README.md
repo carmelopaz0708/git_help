@@ -46,9 +46,9 @@ The user can opt to have `git commit -m description -m description` to give more
 
 **git push origin** *branch-name*
 
-Copies the current branch's latest commit to Github.
+Copies the current branch's latest commit to Github. *Branch-name* refers to any branch in the repository, including `master`.
 
-Replaces the **remote** repository with the commit version on your local machine.
+Ideally, the user should use `git push -u origin branch-name` when pushing commits to the remote repository for the first time. This command will create an upstream link that'll keep track of succeeding commits in the same *branch-name*. Doing so succintly reduces command line input to `git push` for future commits in that repository.
 
 #### git pull
 
