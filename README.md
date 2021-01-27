@@ -56,3 +56,11 @@ Switches current branch to `branch-name`.
 #### git checkout -b branch-name
 
 Creates a new branch called `branch-name` and switches your current branch to it.
+
+#### git diff branch-name
+
+Compares code between `branch-name` and `master`. Displays output to the command line.
+
+#### git merge branch-name
+
+Merge changes between `branch-name` and `master`
