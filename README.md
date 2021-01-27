@@ -36,11 +36,17 @@ Adds all prior code revisions to the current working file or directory. A file/f
 
 **git commit -m** *description*
 
-Set's the current local repository as the latest version of that branch. 
+Set's the current local repository as the latest version of that branch. When the repository is pushed, it will replace the remote repository's version with the latest commit. Commits are required to have a description of the latest changes as indicated by *description*.
 
-Tells git to set current repository as the latest version. When pushed, will replace remote repository's contents with the last commit.
+    $ git commit -m *Revised README.md*
+    [feature-build-readme c3a6351] *Revised
+    1 file changed, 17 insertions(+), 6 deletions(-)
 
-#### git push origin *directory*
+The user can opt to have `git commit -m description -m description` to give more detail on the applied changes in code. 
+
+**git push origin** *branch-name*
+
+Copies the current branch's latest commit to Github.
 
 Replaces the **remote** repository with the commit version on your local machine.
 
