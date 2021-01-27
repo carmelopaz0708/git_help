@@ -1,13 +1,17 @@
-# TEST REPOSITORY
+# GIT NOTES
 
-Repository for testing Git & Github functionality. My personal sandbox. 
+This repository contains notes for Git commands I've learned throughout my studies. All of my notes will be compiled here, including examples and their output.
 
-## BASIC GIT COMMANDS
-Entered in the command line.
+### BASIC GIT COMMANDS
 
-#### git init
+Commands for getting started with Git.
 
-Initializes a local directory as a git repository. Adds git functionality to the specified directory.
+###### git init
+
+Initializes current path as a git repository.
+
+    $ git init
+    Initialized empty Git repository in C:/Users/siege/Developer/git/demo/.git/
 
 #### git clone
 
