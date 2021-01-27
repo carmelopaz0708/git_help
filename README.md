@@ -2,18 +2,18 @@
 
 This repository contains notes for Git commands I've learned throughout my studies. All of my notes will be compiled here, including examples and their output.
 
-### BASIC GIT COMMANDS
+### BASIC COMMANDS
 
 Commands for getting started with Git.
 
-###### git init
+**git init**
 
 Initializes current path as a git repository.
 
     $ git init
     Initialized empty Git repository in C:/Users/siege/Developer/git/demo/.git/
 
-#### git clone
+**git clone** *link*
 
 Copies the contents of the remote repository to your local machine.
 
