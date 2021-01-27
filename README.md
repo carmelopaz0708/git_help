@@ -56,3 +56,5 @@ Switches current branch to `branch-name`.
 #### git checkout -b branch-name
 
 Creates a new branch called `branch-name` and switches your current branch to it.
+
+#### THIS FEATURE WAS CREATED IN A BRANCH.
