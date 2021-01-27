@@ -53,6 +53,6 @@ List all branches in the local repository (including the master branch). The `*`
 
 Switches current branch to `branch-name`.
 
-#### git checkout add branch-name
+#### git checkout -b branch-name
 
 Creates a new branch called `branch-name` and switches your current branch to it.
