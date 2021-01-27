@@ -2,7 +2,7 @@
 
 Repository for testing Git & Github functionality. My personal sandbox. 
 
-## GIT COMMANDS
+## BASIC GIT COMMANDS
 Entered in the command line.
 
 #### git init
@@ -41,3 +41,10 @@ Sets the local directory as `master` and associates it to *link*. *Link* is the 
 
 List remote repositories connected to the current directory.
 
+## GIT BRANCHING
+
+Allows developers to create separate branches of the code in the development cycle. These paths will be used to test new features in code without risk of breaking the master branch. Code modified in branches does not affect the master branch nor any other branch separate from itself.
+
+#### git branch
+
+List all branches in the local repository(including the master branch).
