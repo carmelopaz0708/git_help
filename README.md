@@ -6,10 +6,8 @@ This repository contains notes for Git commands I've learned throughout my studi
 
 Commands for getting started with Git.
 
-**git init**
-
+**git init**<br>
 Initializes current path as a git repository.
-
     $ git init
     Initialized empty Git repository in C:/Users/siege/Developer/git/demo/.git/
 
