@@ -57,4 +57,10 @@ Switches current branch to `branch-name`.
 
 Creates a new branch called `branch-name` and switches your current branch to it.
 
-#### THIS FEATURE WAS CREATED IN A BRANCH.
+#### git diff branch-name
+
+Compares code between `branch-name` and `master`. Displays output to the command line.
+
+#### git merge branch-name
+
+Merge changes between `branch-name` and `master`
