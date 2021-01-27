@@ -15,17 +15,28 @@ Initializes current path as a git repository.
 
 **git clone** *link*
 
-Copies the contents of the remote repository to your local machine.
+Copies the contents of the remote repository associated with *link* to your local machine. *Link* refers to the remote repository's URL in Github. The cloned repository will automatically contain the initialization files that enable git commands.
 
-#### git status
+    $ git clone https://github.com/carmelopaz0708/test-repo.git
+    Cloning into 'test-repo'...
+    remote: Enumerating objects: 67, done.
+    remote: Counting objects: 100% (67/67), done.
+    remote: Compressing objects: 100% (49/49), done.
+    Receiving objects: 100% (67/67), 9.89 KiB | 361.00 KiB/s, done.0Receiving objects:  61% (41/67)
 
-Tracks version changes to the file or repository.
+    Resolving deltas: 100% (20/20), done.
 
-#### git add *directory*
+**git status**
 
-Tracks the changes to files and folders in *directory* with the remote repository. Next commit will add the most recent changes to the remote repository.
+Displays the current working file's code revisions in the current directory.
 
-#### git commit -m *message*
+**git add** *file-name/directory*
+
+Adds all prior code revisions to the current working file or directory. A file/folder having `git commit` will only consider code changes up to the last `git add`. Common usage involves including the current directory such as `git add .`. The user can also add individual files with `git add file-name`.
+
+**git commit -m** *description*
+
+Set's the current local repository as the latest version of that branch. 
 
 Tells git to set current repository as the latest version. When pushed, will replace remote repository's contents with the last commit.
 
