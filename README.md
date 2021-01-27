@@ -50,6 +50,17 @@ Copies the current branch's latest commit to Github. *Branch-name* refers to any
 
 Ideally, the user should use `git push -u origin branch-name` when pushing commits to the remote repository for the first time. This command will create an upstream link that'll keep track of succeeding commits in the same *branch-name*. Doing so succintly reduces command line input to `git push` for future commits in that repository.
 
+    $ git push
+    Enumerating objects: 11, done.
+    Counting objects: 100% (11/11), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (9/9), done.
+    Writing objects: 100% (9/9), 2.59 KiB | 1.30 MiB/s, done.
+    Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (2/2), done.
+    To https://github.com/carmelopaz0708/test-repo.git
+        971be80..3e91136  feature-build-readme -> feature-build-readme
+
 #### git pull
 
 Pulls the remote repository and its latest version changes to the local directory.
