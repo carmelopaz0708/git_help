@@ -15,7 +15,7 @@ Copies the contents of the remote repository to your local machine.
 
 #### git status
 
-Cross-checks your git commit version with the remote repository for version changes.
+Tracks version changes to the file or repository.
 
 #### git add *directory*
 
@@ -31,7 +31,7 @@ Replaces the **remote** repository with the commit version on your local machine
 
 #### git push -u origin *directory*
 
-In addition to working the same way as `git push origin *directory*`, sets an upstream link to your git remote repository. This allows the user to omit `origin *directory*` in their next `git push`.
+In addition to working the same way as `git push origin directory`, sets an upstream link to your git remote repository. This allows the user to omit `origin directory` in their next `git push`.
 
 #### git remote add origin *link*
 
