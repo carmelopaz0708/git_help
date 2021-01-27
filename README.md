@@ -61,21 +61,17 @@ Ideally, the user should use `git push -u origin branch-name` when pushing commi
     To https://github.com/carmelopaz0708/test-repo.git
         971be80..3e91136  feature-build-readme -> feature-build-readme
 
-#### git pull
+**git pull**
 
-Pulls the remote repository and its latest version changes to the local directory.
+Pulls the latest branch version of the remote repository to the current local directory. If no changes are detected, `git pull` will return nothing.
 
-#### git push -u origin *directory*
+**git remote**
 
-In addition to working the same way as `git push origin directory`, sets an upstream link to your git remote repository. This allows the user to omit `origin directory` in their next `git push`.
+Commands for communicating with the remote repository. To check the list of remote repositories tied to the current local branch, use `git remote -v`. The command `git remote add origin link` sets the local folder as `master` and ties it to a remote repository in Github. Replace *link* with the repository's URL in Github.
 
-#### git remote add origin *link*
-
-Sets the local directory as `master` and associates it to *link*. *Link* is the URL for the Github repository in the remote server.
-
-#### git remote -v
-
-List remote repositories connected to the current directory.
+    $ git remote -v
+    origin  https://github.com/carmelopaz0708/test-repo.git (fetch)
+    origin  https://github.com/carmelopaz0708/test-repo.git (push)
 
 ## GIT BRANCHING
 
