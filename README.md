@@ -47,4 +47,12 @@ Allows developers to create separate branches of the code in the development cyc
 
 #### git branch
 
-List all branches in the local repository(including the master branch).
+List all branches in the local repository (including the master branch). The `*` indicates the active branch in your local repository.
+
+#### git branch branch-name
+
+Switches current branch to `branch-name`.
+
+#### git checkout add branch-name
+
+Creates a new branch called `branch-name` and switches your current branch to it.
