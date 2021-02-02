@@ -119,9 +119,4 @@ Displays code revisions between *branch-name* and *master*. Output is displayed 
 
 **git merge** *branch-name*
 
-
-#### git merge branch-name
-
-Merge changes between `branch-name` to `master`
-
-Check if this line of code is included in main.
+Locally merges the contents of *branch-name* with the contents of your current branch.
