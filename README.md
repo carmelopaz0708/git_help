@@ -28,7 +28,7 @@ Copies the contents of the remote repository associated with *link* to your loca
 
 **git status**
 
-Displays the current working file's code revisions in the current directory.
+Displays the current working file's code modifications and commit status in the current directory.
 
 **git add** *file-name/directory*
 
@@ -48,7 +48,7 @@ The user can opt to have `git commit -m description -m description` to give more
 
 Copies the current branch's latest commit to Github. *Branch-name* refers to any branch in the repository, including `master`.
 
-Ideally, the user should use `git push -u origin branch-name` when pushing commits to the remote repository for the first time. This command will create an upstream link that'll keep track of succeeding commits in the same *branch-name*. Doing so succintly reduces command line input to `git push` for future commits in that repository.
+Ideally, the user should use `git push -u origin branch-name` when pushing commits to the remote repository for the first time. This command will create an upstream link that'll keep track of succeeding commits in the same *branch-name*. Doing so reduces command line input to `git push` for future commits in that repository.
 
     $ git push
     Enumerating objects: 11, done.
@@ -75,23 +75,47 @@ Commands for communicating with the remote repository. To check the list of remo
 
 ## GIT BRANCHING
 
-Allows developers to create separate branches of the code in the development cycle. These paths will be used to test new features in code without risk of breaking the master branch. Code modified in branches does not affect the master branch nor any other branch separate from itself.
+Allows developers to create separate branches of the code in the development cycle. These paths will be used to test new features in code without risk of breaking the master branch. Code modified in branches does not affect the master branch nor any other branch separate from itself. Note that in order for changes in branches to be considered, the programmer must create a pull request after pushing the branch to Github.
 
-#### git branch
+**git branch**
 
-List all branches in the local repository (including the master branch). The `*` indicates the active branch in your local repository.
+When used without arguments, `git branch` will return all available branches in the local repository to the command line. This includes `master`/`main` (which is always included) plus any branch created by other developers currently present in the repository. Note that the `*` symbol shows what branch the local repository is currently in.
 
-#### git branch branch-name
+    $ git branch
+    * develop_readme
+      main
 
-Switches current branch to `branch-name`.
+You can also append *branch-name* at the end of the command (such as `git branch develop_readme` or `git branch main`). By using `git branch branch-name`, Git will create a separate branch called *branch-name* in the local repository.
 
-#### git checkout -b branch-name
+    $ git branch demo
+    $ git branch
+      demo
+    * develop_readme
+      main
 
-Creates a new branch called `branch-name` and switches your current branch to it.
+Note that if *branch name* already exists, `git branch branch-name` will return a fatal error. 
 
-#### git branch -d branch-name
+    $ git branch develop_readme
+    fatal: A branch named 'develop_readme' already exists.
 
-Delete `branch-name`
+Lastly, to delete a branch, use `git branch -d branch-name`, wherein *branch-name* specifies the name of the branch to be deleted. **This action does not have any safety prompt and cannot be undone.**
+
+    $ git branch -d black_hole
+    Deleted branch black_hole (was 4fe57c7).
+
+**git checkout** *branch-name*
+
+Like what its namesake implies, `git checkout branch-name` switches the current branch to *branch-name*. The command also displays current modifications made to the code in that branch.
+
+    $ git checkout develop_readme
+    Switched to branch 'develop_readme'
+    M       README.md
+
+A useful shortcut to creating a nonexistent branch and automatically switching to it can be done with `git checkout -b branch-name`. The command both creates *branch-name* and switches the branch to that name. If *branch-name* already exists, the terminal will return an error.
+
+**git diff** *branch-name*
+
+Displays code revisions between *branch-name* and *master*. Output is displayed to the command line. To exit, enter `q`.
 
 #### git diff branch-name
 
