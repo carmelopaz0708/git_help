@@ -117,14 +117,6 @@ A useful shortcut to creating a nonexistent branch and automatically switching t
 
 Displays code revisions between *branch-name* and *master*. Output is displayed to the command line. To exit, enter `q`.
 
-#### git diff branch-name
+**git merge** *branch-name*
 
-Compares code between `branch-name` and `master`. Displays output to the command line.
-
-#### git merge branch-name
-
-Merge changes between `branch-name` to `master`
-
-Check if this line of code is included in main.
-
-This isn't included in main.
+Merges the changes made in branch *branch-name* with *main*/*master*.
