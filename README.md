@@ -1,49 +1,77 @@
-# TEST REPOSITORY
+# GIT NOTES
 
-Repository for testing Git & Github functionality. My personal sandbox. 
+This repository contains notes for Git commands I've learned throughout my studies. All of my notes will be compiled here, including examples and their output.
 
-## BASIC GIT COMMANDS
-Entered in the command line.
+### BASIC COMMANDS
 
-#### git init
+Commands for getting started with Git.
 
-Initializes a local directory as a git repository. Adds git functionality to the specified directory.
+**git init**
 
-#### git clone
+Initializes current path as a git repository.
 
-Copies the contents of the remote repository to your local machine.
+    $ git init
+    Initialized empty Git repository in C:/Users/siege/Developer/git/demo/.git/
 
-#### git status
+**git clone** *link*
 
-Tracks version changes to the file or repository.
+Copies the contents of the remote repository associated with *link* to your local machine. *Link* refers to the remote repository's URL in Github. The cloned repository will automatically contain the initialization files that enable git commands.
 
-#### git add *directory*
+    $ git clone https://github.com/carmelopaz0708/test-repo.git
+    Cloning into 'test-repo'...
+    remote: Enumerating objects: 67, done.
+    remote: Counting objects: 100% (67/67), done.
+    remote: Compressing objects: 100% (49/49), done.
+    Receiving objects: 100% (67/67), 9.89 KiB | 361.00 KiB/s, done.0Receiving objects:  61% (41/67)
 
-Tracks the changes to files and folders in *directory* with the remote repository. Next commit will add the most recent changes to the remote repository.
+    Resolving deltas: 100% (20/20), done.
 
-#### git commit -m *message*
+**git status**
 
-Tells git to set current repository as the latest version. When pushed, will replace remote repository's contents with the last commit.
+Displays the current working file's code revisions in the current directory.
 
-#### git push origin *directory*
+**git add** *file-name/directory*
 
-Replaces the **remote** repository with the commit version on your local machine.
+Adds all prior code revisions to the current working file or directory. A file/folder having `git commit` will only consider code changes up to the last `git add`. Common usage involves including the current directory such as `git add .`. The user can also add individual files with `git add file-name`.
 
-#### git pull
+**git commit -m** *description*
 
-Pulls the remote repository and its latest version changes to the local directory.
+Set's the current local repository as the latest version of that branch. When the repository is pushed, it will replace the remote repository's version with the latest commit. Commits are required to have a description of the latest changes as indicated by *description*.
 
-#### git push -u origin *directory*
+    $ git commit -m *Revised README.md*
+    [feature-build-readme c3a6351] *Revised
+    1 file changed, 17 insertions(+), 6 deletions(-)
 
-In addition to working the same way as `git push origin directory`, sets an upstream link to your git remote repository. This allows the user to omit `origin directory` in their next `git push`.
+The user can opt to have `git commit -m description -m description` to give more detail on the applied changes in code. 
 
-#### git remote add origin *link*
+**git push origin** *branch-name*
 
-Sets the local directory as `master` and associates it to *link*. *Link* is the URL for the Github repository in the remote server.
+Copies the current branch's latest commit to Github. *Branch-name* refers to any branch in the repository, including `master`.
 
-#### git remote -v
+Ideally, the user should use `git push -u origin branch-name` when pushing commits to the remote repository for the first time. This command will create an upstream link that'll keep track of succeeding commits in the same *branch-name*. Doing so succintly reduces command line input to `git push` for future commits in that repository.
 
-List remote repositories connected to the current directory.
+    $ git push
+    Enumerating objects: 11, done.
+    Counting objects: 100% (11/11), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (9/9), done.
+    Writing objects: 100% (9/9), 2.59 KiB | 1.30 MiB/s, done.
+    Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (2/2), done.
+    To https://github.com/carmelopaz0708/test-repo.git
+        971be80..3e91136  feature-build-readme -> feature-build-readme
+
+**git pull**
+
+Pulls the latest branch version of the remote repository to the current local directory. If no changes are detected, `git pull` will return nothing.
+
+**git remote**
+
+Commands for communicating with the remote repository. To check the list of remote repositories tied to the current local branch, use `git remote -v`. The command `git remote add origin link` sets the local folder as `master` and ties it to a remote repository in Github. Replace *link* with the repository's URL in Github.
+
+    $ git remote -v
+    origin  https://github.com/carmelopaz0708/test-repo.git (fetch)
+    origin  https://github.com/carmelopaz0708/test-repo.git (push)
 
 ## GIT BRANCHING
 
