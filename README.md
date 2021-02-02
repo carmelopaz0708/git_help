@@ -124,3 +124,7 @@ Compares code between `branch-name` and `master`. Displays output to the command
 #### git merge branch-name
 
 Merge changes between `branch-name` to `master`
+
+Check if this line of code is included in main.
+
+This isn't included in main.
